@@ -50,6 +50,45 @@ Examples
 <p>The <code>gisfile.json.js</code> file does not includes the Leaflet and jsZip library. 
 You will have to include the Leaflet and jsZip yourself.</p>
 
+<div class="highlight highlight-html">
+<pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script src="http://gisfile.com/js/jquery/jquery-1.8.0.min.js"&gt;&lt;/script&gt;
+        &lt;link rel="stylesheet" href="http://gisfile.com/css/leaflet.css" /&gt;
+        &lt;script src="http://gisfile.com/js/leaflet.js"&gt;&lt;/script&gt;
+        &lt;script src="http://gisfile.com/js/gisfile.json.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="map" style="width: 100%; height: 500px"&gt;&lt;/div&gt;
+
+        &lt;script type="text/javascript"&gt;
+            var map = new L.map("map", {
+                    center: [50.43146, 30.99928], 
+                    zoom: 16
+                });
+
+            if (map) {
+                var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+                map.addLayer( osm);
+                    new L.GisFileJson({ layer : 'kipai'
+                        , url: 'http://gisfile.com/layer/{l}/{z}/{x}/{y}.zip'
+                        , minSize: 5
+                        , onActiveFeature: function (feature, layer) {
+                            if (feature.properties && feature.properties.name && feature.properties.name.length &gt; 0)
+                                layer.bindPopup( feature.properties.name);
+                        }
+                        , style: function(feature) {
+                            return {weight: 1, fillOpacity: 0.1, color: '#FA0000', fillColor: '#FA0000'};
+                        }
+                    }).addTo(map);
+            }
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
 <h2>
 <a id="user-content-references" class="anchor" href="#references" aria-hidden="true">
 <span class="octicon octicon-link"></span></a>
