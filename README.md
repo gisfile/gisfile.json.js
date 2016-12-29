@@ -58,7 +58,7 @@ You will have to include the Leaflet and jsZip yourself.</p>
         &lt;link rel="stylesheet" href="http://gisfile.com/css/leaflet.css" /&gt;
         &lt;script src="http://gisfile.com/js/leaflet.js"&gt;&lt;/script&gt;
         &lt;script src="http://gisfile.com/js/gisfile.json.js"&gt;&lt;/script&gt;
-        &lt;script src='http://gisfile.com/js/jszip.min.js'&gt;&lt;/script&gt;
+        &lt;script src="http://gisfile.com/js/jszip.min.js"&gt;&lt;/script&gt;
     &lt;/head&gt;
     &lt;body&gt;
         &lt;div id="map" style="width: 100%; height: 500px"&gt;&lt;/div&gt;
