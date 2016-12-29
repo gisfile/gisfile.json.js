@@ -12,8 +12,8 @@ Examples
 </h2>
 
 <ul>
-<li><a href="http://gisfile.com/layer/USACountry/tile?json&lat=39&lon=-98&z=5&fs=1">json box data</a></li>
-<li><a href="http://gisfile.com/layer/USARegions/tile?zip&lat=39&lon=-98&z=5&fs=1">zip (packed json) box data</a></li>
+<li><a href="http://gisfile.com/layer/SPcities/tile?json&fs=1">json box data</a></li>
+<li><a href="http://gisfile.com/layer/SpatialTown/tile?zip&lat=50.43&lon=30.67&z=9">zip (packed json) box data</a></li>
 </ul>
 
 <h2>
